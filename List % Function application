@@ -1,0 +1,54 @@
+def getmax(val):
+    maxvalue =val[0]
+    for i in range(1,5,1):
+        if maxvalue< value[i]:
+            maxvalue = value[i]
+        else:
+            continue
+        
+    return maxvalue
+
+
+def getmin(val):
+    minvalue =val[0]
+    for p in range(1,5,1):
+        if minvalue>value[p]:
+            minvalue = value[p]
+        else:
+            continue
+
+    return minvalue
+    
+
+def getsum(val):
+    sumvalue=0
+
+    for k in range(0,5,1):
+        sumvalue += value[k]
+
+    return sumvalue
+
+
+def getavg(val):
+
+    ssumvalue=0
+    for k in range(0,5,1):
+        ssumvalue += value[k]
+
+    avgvalue = ssumvalue/5
+
+    return avgvalue
+
+
+if __name__ == "__main__":
+
+    value = [ 15, 7, 4, 10, 27 ]
+    print("리스트 : %s\n" %value)
+    print("최댓값 : %s\n" %getmax(value))
+    print("최솟값 : %s\n" %getmin(value))
+    print("합계 : %s\n" %getsum(value))
+    print("평균 : %s\n" %getavg(value))
+
+
+
+    
