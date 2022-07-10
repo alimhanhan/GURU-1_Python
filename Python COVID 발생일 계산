@@ -1,0 +1,24 @@
+covid = [[3,5],[7,9],[17,17],[21,28],[30,30]]
+
+print("7월 서울, 경기 코로나 발생일 : %s\n "%covid)
+result = 0
+
+days = [False]*31
+print("%s"%days)
+
+for c in covid:
+    start = c[0]
+    end = c[1]
+
+    for i in range(start-1, end):
+        days[i]=True
+
+
+for day in days:
+    if day ==True:
+        result +=1
+
+
+print("%s\n"%days)
+
+print("7월 서울, 경기 코로나 총 발생일 : %d일" %result)
