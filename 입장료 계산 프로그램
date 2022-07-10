@@ -44,7 +44,7 @@ if __name__ == "__main__":
         show()
 
         for i in range(0,numtype,1):
-            totalfare + fare[i]*fareqty[i]
+            totalfare += fare[i]*fareqty[i]
     
 
     print("총 금액은 %d원입니다.\n"%totalfare)
