@@ -1,0 +1,52 @@
+def update(age):
+    global fareqty
+    
+    if age >=65:
+        fareqty[0]+= 1
+        
+    elif age>=18:
+        fareqty[1] +=1
+        
+    elif age>=8:
+        fareqty[2]+=1
+        
+    else:
+        fareqty[3]+=1
+        
+
+def show():
+    for i in range(0,numtype):
+        print("%s %d원 : %d명"%(faretype[i],fare[i],fareqty[i]))
+
+
+if __name__ == "__main__":
+    faretype = ["경로","성인","청소년","아동"]
+    numtype =len(faretype)
+
+    fare = [3000,5000,2000,1000]
+    fareqty =[0,0,0,0]
+
+    totalfare=0
+
+    print("======== 입장료 ========\n")
+    
+    for i in range(0,numtype,1):
+        print("%s : %d원\n" %(faretype[i],fare[i]))
+
+    print("=========================\n")
+
+    while True:
+
+        age=int(input("나이를 입력하시오. (종료하려면 -1을 입력하라) : "))
+        if age ==-1:
+            break
+
+        update(age)
+        show()
+        
+
+        for i in range(0,numtype,1):
+            totalfare += fare[i]*fareqty[i]
+    
+
+    print("총 금액은 %d원입니다.\n"%totalfare)
